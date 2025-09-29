@@ -1,0 +1,103 @@
+.chat-box {
+  position: fixed;
+  bottom: 130px;
+  right: 0;
+  width: 400px; /* Adjust the width as needed */
+  height: 60%; /* Adjust the height as needed */
+  background-color: #f0f0f0; /* Background color for the chat box */
+  overflow-y: auto; /* Enable vertical scrolling */
+  display: flex;
+  flex-direction: column; /* Reverse column direction to show messages from bottom to top */
+  z-index: 9999;
+}
+
+.chat-container {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Display children in a column */
+}
+
+.conversation-container {
+  flex: 1; /* Take up remaining space */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+}
+
+.input-container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.message-input {
+  flex: 1; /* Take up remaining space */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.send-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+.message {
+  margin: 5px 0;
+}
+
+.ai-message {
+  text-align: left;
+  background-color: #f0f0f0; /* Light gray background for AI messages */
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: auto; /* Align to left */
+}
+
+.user-message {
+  text-align: right;
+  background-color: #b3d9ff; /* Light blue background for user messages */
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: auto; /* Align to right */
+}
+
+.toggle-chat {
+  position: fixed;
+  bottom: 130px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-chat.active {
+  background-color: #dc3545;
+}
+
+.minimize-chat {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: Shipment Q&A  App
+  main:
+    allow-circular-references: true
+  ai:
+    model:
+      chat: bedrock-converse
+      embedding: bedrock-titan
+    bedrock:
+      region: eu-west-1
+      access-key: AWS_ACCESS_KEY
+      secret-key: AWS_SECRET_KEY
+      titan:
+        embedding:
+          enabled: true
+          model: amazon.titan-embed-image-v1
+      converse:
+        chat:
+          options:
+            model: amazon.nova-pro-v1:0
+  datasource:
+    url: POSTGRES_DB_URL
+    username: POSTGRES_DB_USERNAME
+    password: POSTGRES_DB_PASSWORD
+logging:
+  level:
+    root: INFO
+    com.example.genai.shipment.qna.app: DEBUG
